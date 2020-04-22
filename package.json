@@ -1,0 +1,11 @@
+{
+  "name": "intube2",
+  "version": "1.0.0",
+  "description": "Cloning Youtube with NodeJS",
+  "main": "index.js",
+  "author": "Inkyo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

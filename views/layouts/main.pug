@@ -1,8 +1,10 @@
 doctype html
-    html
-        head
-            title Intube
-        body
-            main
-            footer
-                span &copy; Intube
+html
+    head
+        script(src="https://kit.fontawesome.com/0fb9259e33.js")
+        title Intube
+    body
+        include ../partials/header
+        main
+            block content
+        include ../partials/footer

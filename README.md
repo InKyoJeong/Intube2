@@ -1,17 +1,18 @@
 # Intube
 
-## Pages
+## Technologies
 
-- [ ] Home
-- [x] Join
-- [x] Login
-- [x] Search
-- [ ] User Detail
-- [ ] Edit Profile
-- [ ] Change Password
-- [ ] Upload
-- [ ] Video Detail
-- [ ] Edit Video
+ES6, NodeJS(Express), MongoDB(mongoose), Webpack, Pug
+
+## Features
+
+- [ ] Facebook/ Github Login
+- [ ] Kakao Login
+- [ ] Video Upload/ Delete/ Search
+
+<!-- ## Deploy
+
+- Heroku -->
 
 ## Structure
 
@@ -20,6 +21,9 @@ INTUBE
 ├── controller
 │   ├── userController.js
 │   └── videoController.js
+├── models
+│   ├── Commnet.js
+│   └── Video.js
 ├── routers
 │   ├── globalRouter.js
 │   ├── userRouter.js
@@ -53,3 +57,16 @@ INTUBE
 ├── node_modules
 └── .gitigonore
 ```
+
+## Pages
+
+- [ ] Home
+- [x] Join
+- [x] Login
+- [x] Search
+- [ ] User Detail
+- [ ] Edit Profile
+- [ ] Change Password
+- [ ] Upload
+- [ ] Video Detail
+- [ ] Edit Video

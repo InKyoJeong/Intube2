@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
 const CommentSchema = new mongoose.Schema({
   text: {
@@ -11,6 +11,6 @@ const CommentSchema = new mongoose.Schema({
   },
 });
 
-const model = mongoose.model("Commnet", CommentSchema);
+const model = mongoose.model("Comment", CommentSchema);
 
 export default model;

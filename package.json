@@ -11,6 +11,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^3.22.0",
+    "install": "^0.13.0",
     "mongoose": "^5.9.11",
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
@@ -20,8 +21,12 @@
     "start": "nodemon --exec babel-node init.js --delay 2"
   },
   "devDependencies": {
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
+    "eslint": "^7.0.0",
     "nodemon": "^2.0.3"
   }
 }

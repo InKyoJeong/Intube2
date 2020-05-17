@@ -112,6 +112,6 @@ temp/
 
 
 node_modules
+/static/
 package-lock.json
 uploads
-static/

@@ -11,28 +11,25 @@ body {
 
 main {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   min-height: 70vh;
 }
 
 button,
-input,
-textarea {
+input:not([type="file"]),
+textarea,
+.fileUpload {
   padding: 7px 10px;
   width: 100%;
   max-width: 320px;
   border: none;
   border-radius: 5px;
   font-size: 14px;
+  background-color: white;
   color: $black;
   font-weight: 600;
   resize: none;
-}
-
-.videoBlock__thumbnail {
-  width: 400px;
-  height: 250px;
 }
 
 button {
@@ -41,6 +38,11 @@ button {
   color: white;
 }
 
-button.delete {
-  background-color: $rose;
+.fileUpload {
+  background-color: white;
+  margin-bottom: 20px;
+}
+button,
+input[type="submit"] {
+  cursor: pointer;
 }

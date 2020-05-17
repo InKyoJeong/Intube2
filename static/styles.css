@@ -151,13 +151,14 @@ body {
 
 main {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   min-height: 70vh; }
 
 button,
-input,
-textarea {
+input:not([type="file"]),
+textarea,
+.fileUpload {
   padding: 7px 10px;
   width: 100%;
   max-width: 320px;
@@ -166,21 +167,23 @@ textarea {
      -moz-border-radius: 5px;
           border-radius: 5px;
   font-size: 14px;
+  background-color: white;
   color: #444444;
   font-weight: 600;
   resize: none; }
-
-.videoBlock__thumbnail {
-  width: 400px;
-  height: 250px; }
 
 button {
   border: none;
   background-color: #3b8d99;
   color: white; }
 
-button.delete {
-  background-color: #aa4b6b; }
+.fileUpload {
+  background-color: white;
+  margin-bottom: 20px; }
+
+button,
+input[type="submit"] {
+  cursor: pointer; }
 
 .header {
   background: #aa4b6b;
@@ -254,6 +257,12 @@ button.delete {
           font-weight: 400;
           color: rgba(0, 0, 0, 0.5); }
 
+@media screen and (max-width: 768px) {
+  .header__column {
+    padding: 0px 10px; }
+    .header__column:nth-child(2) {
+      padding: 0; } }
+
 .footer {
   margin: 50px 0;
   padding-top: 50px;
@@ -305,11 +314,18 @@ button.delete {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .form-container a > button {
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.3);
+       -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.3);
+    font-size: 15px;
+    padding: 8px 10px; }
   .form-container form {
     width: 100%;
     max-width: 320px;
     margin-bottom: 35px; }
-    .form-container form input {
+    .form-container form input:not([type="file"]),
+    .form-container form .fileUpload {
       width: 100%;
       padding: 8px 10px;
       -webkit-border-radius: 4px;
@@ -320,25 +336,27 @@ button.delete {
       -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.3);
          -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.3);
               box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.3); }
-      .form-container form input::-webkit-input-placeholder {
+      .form-container form input:not([type="file"])::-webkit-input-placeholder, .form-container form .fileUpload::-webkit-input-placeholder {
         font-weight: 400;
         color: rgba(0, 0, 0, 0.5); }
-      .form-container form input:-moz-placeholder {
+      .form-container form input:not([type="file"]):-moz-placeholder, .form-container form .fileUpload:-moz-placeholder {
         font-weight: 400;
         color: rgba(0, 0, 0, 0.5); }
-      .form-container form input::-moz-placeholder {
+      .form-container form input:not([type="file"])::-moz-placeholder, .form-container form .fileUpload::-moz-placeholder {
         font-weight: 400;
         color: rgba(0, 0, 0, 0.5); }
-      .form-container form input:-ms-input-placeholder {
+      .form-container form input:not([type="file"]):-ms-input-placeholder, .form-container form .fileUpload:-ms-input-placeholder {
         font-weight: 400;
         color: rgba(0, 0, 0, 0.5); }
-      .form-container form input::-ms-input-placeholder {
+      .form-container form input:not([type="file"])::-ms-input-placeholder, .form-container form .fileUpload::-ms-input-placeholder {
         font-weight: 400;
         color: rgba(0, 0, 0, 0.5); }
-      .form-container form input::placeholder {
+      .form-container form input:not([type="file"])::placeholder,
+      .form-container form .fileUpload::placeholder {
         font-weight: 400;
         color: rgba(0, 0, 0, 0.5); }
-      .form-container form input:not(:last-child) {
+      .form-container form input:not([type="file"]):not(:last-child),
+      .form-container form .fileUpload:not(:last-child) {
         margin-bottom: 25px; }
     .form-container form textarea {
       margin-bottom: 25px;
@@ -348,11 +366,17 @@ button.delete {
     .form-container form input[type="submit"] {
       background-color: #3b8d99;
       color: white; }
-  .form-container .form-container__link--delete {
+  .form-container .form-container__link--delete,
+  .form-container .changePassword {
     width: 100%;
     max-width: 320px; }
   .form-container .form-container__link--delete > button {
     background-color: #aa4b6b; }
+  .form-container .changePassword > button {
+    background-color: #aa4b6b; }
+  .form-container .fileUpload label {
+    font-weight: 400;
+    margin-right: 10px; }
 
 .social-login {
   display: -webkit-box;
@@ -402,6 +426,15 @@ button.delete {
     background-color: #3a5998;
     color: white; }
 
+.videoBlock video {
+  max-width: 100%;
+  margin-bottom: 10px; }
+
+.videoBlock .videoBlock__title {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px; }
+
 .video-detail__container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -443,3 +476,29 @@ button.delete {
     margin-top: 25px; }
     .video-detail__container .video__comments .video__comment-number {
       font-size: 18px; }
+
+.home-videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 30px; }
+  .home-videos .videoBlock:first-child,
+  .home-videos .videoBlock:nth-child(2) {
+    grid-column: span 3; }
+  .home-videos .videoBlock:nth-child(3),
+  .home-videos .videoBlock:nth-child(4),
+  .home-videos .videoBlock:nth-child(5) {
+    grid-column: span 2; }
+
+@media screen and (max-width: 768px) {
+  .home-videos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    margin: 0px 10px; }
+    .home-videos .videoBlock:first-child,
+    .home-videos .videoBlock:nth-child(2) {
+      grid-column-start: 1;
+      grid-column-end: span 2; }
+    .home-videos .videoBlock:nth-child(3),
+    .home-videos .videoBlock:nth-child(4),
+    .home-videos .videoBlock:nth-child(5) {
+      grid-column: span 1; } }

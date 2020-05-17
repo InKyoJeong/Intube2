@@ -3,11 +3,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  a > button {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.3);
+    font-size: 15px;
+    padding: 8px 10px;
+  }
   form {
     width: 100%;
     max-width: 320px;
     margin-bottom: 35px;
-    input {
+    input:not([type="file"]),
+    .fileUpload {
       width: 100%;
       padding: 8px 10px;
       border-radius: 4px;
@@ -31,11 +37,21 @@
       color: white;
     }
   }
-  .form-container__link--delete {
+  .form-container__link--delete,
+  .changePassword {
     width: 100%;
     max-width: 320px;
   }
   .form-container__link--delete > button {
     background-color: $rose;
+  }
+  .changePassword > button {
+    background-color: $rose;
+  }
+  .fileUpload {
+    label {
+      font-weight: 400;
+      margin-right: 10px;
+    }
   }
 }

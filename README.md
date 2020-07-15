@@ -6,9 +6,10 @@ ES6, NodeJS(Express), MongoDB(mongoose), Webpack, Pug, Scss
 
 ## Features
 
-- [ ] Facebook/ Github Login
-- [ ] Kakao Login
 - [x] Video Upload/ Delete/ Search
+- [x] Github Login
+- [ ] Facebook Login
+<!-- - [ ] Kakao Login -->
 
 <!-- ## Deploy
 
@@ -79,12 +80,12 @@ INTUBE
 - [x] Join
 - [x] Login
 - [x] Search
-- [ ] User Detail
-- [ ] Edit Profile
-- [ ] Change Password
 - [x] Upload
 - [x] Video Detail
 - [x] Edit Video
+- [ ] User Detail
+- [ ] Edit Profile
+- [ ] Change Password
 
 ## Run
 

@@ -8,7 +8,6 @@ ES6, NodeJS(Express), MongoDB(mongoose), Webpack, Pug, Scss
 
 - [x] Video Upload/ Delete/ Search
 - [x] Github Login
-- [ ] Facebook Login
 <!-- - [ ] Kakao Login -->
 
 <!-- ## Deploy
